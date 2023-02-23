@@ -26,6 +26,6 @@ int print_last_digit(int n)
 		return (00);
 	}
 	return (last_dig * 11);
-//	_putchar('0' + (n % 10));
-//	return (n % 10);
+/*	_putchar('0' + (n % 10));*/
+/*	return (n % 10);*/
 }
