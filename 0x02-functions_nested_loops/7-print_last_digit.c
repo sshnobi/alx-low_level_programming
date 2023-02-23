@@ -1,17 +1,28 @@
-#include "main.h"
+#include <stdio.h>
+#include "math.h"
+/* more headers goes there */
 
+/* betty style doc for function main goes there */
 /**
- * print_last_digit - print last digit of integer
- * @n: integer argument
- * Return: last digit of number
+ * print_last_digit - fucntion to return last digit
+ * @c: integer
+ * Return: last digit
  */
-
-int print_last_digit(int n)
+int print_last_digit(int c)
 {
-	if (n < 0)
-		n *= -1;
+	int last_dig;
 
-       	_putchar('0' + (n % 10));
-
-	return (n % 10);
+	if (c < 0)
+	{
+		last_dig = ((c * -1) % 10);
+	}
+	else
+	{
+		last_dig = (c % 10);
+	}
+	if (last_dig == 0)
+	{
+		return (00);
+	}
+	return (last_dig * 11);
 }
