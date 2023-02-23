@@ -1,27 +1,40 @@
 #include <stdio.h>
+#include "math.h"
+/* more headers goes there */
 
+/* betty style doc for function main goes there */
 /**
- * main - print first 50 Fibonacci numbers
- * Return: 0
+ * main - main fucntion
+ * Return: always 0
  */
-
 int main(void)
 {
-	int counter;
-	int countto = 50;
-	long a = 1;
-	long b = 2;
+	long current = 2;
+	long previous = 1;
+	int count = 0;
 
-	for (counter = 1; counter <= (countto / 2); counter++)
+	while (count < 50)
 	{
-		printf("%li %li ", a, b);
-		a += b;
-		b += a;
+		if (count == 0)
+		{
+			printf("%ld", previous);
+			count++;
+		}
+		else if (count == 1)
+		{
+			printf(", %ld", current);
+			count++;
+		}
+		else
+		{
+			long fib = current + previous;
+
+			previous = current;
+			current = fib;
+			count++;
+			printf(", %ld", fib);
+		}
 	}
-	if (countto % 2 == 1)
-		printf("%li", a);
-
 	printf("\n");
-
 	return (0);
 }
