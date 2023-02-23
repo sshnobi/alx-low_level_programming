@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include "main.h"
+#include "math.h"
 
 /**
  * print_last_digit - print last digit of integer
@@ -8,9 +10,22 @@
 
 int print_last_digit(int n)
 {
-	if (n < 0)
-		n *= -1;
+	int last_dig;
 
-	_putchar('0' + (n % 10));
-	return (n % 10);
+	if (n < 0)
+	{
+		last_dig = ((n * -1) % 10);
+	}
+	else
+	{
+		last_dig = (n % 10);
+	}
+
+	if (last_dig == 0)
+	{
+		return (00);
+	}
+	return (last_dig * 11);
+//	_putchar('0' + (n % 10));
+//	return (n % 10);
 }
