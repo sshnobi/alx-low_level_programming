@@ -16,33 +16,15 @@ void rev_string(char *s)
 	int i, j;
 
 	i = 0;
-	j = size - 1;
+	size --;
 
-	while (i < j)
+	while (i < size)
 	{
 		tmp = s[i];
-		s[i] = s[j];
+		s[i] = s[size];
 		s[j] = tmp;
 		i++;
-		j--;
+		size--;
 	}
 	/* put("\n"); */
-}
-
-/**
- * _strlen - returns length of a string
- * @s: string
- * Return: len
- */
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-
-	return (len);
 }
