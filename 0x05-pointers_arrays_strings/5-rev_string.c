@@ -12,13 +12,23 @@
 void rev_string(char *s)
 {
 	int size = _strlen(s);
+	char tmp;
+	int i, j;
+	
+	i = 0;
+	int j = size - 1;
 
-	s = s + (size - 1);
-	while (size > 0)
+	while (i < j)
 	{
+		/*tmp = s[i];
+		s[i] = s[j];
+		s[j] = tmp;
+		i++, j--;*/
+		
 		printf("%c", *s);
-		s--;
-		size--;
+		i++, j--;
+		/*s--;
+		size--;*/
 	}
 	/* put("\n"); */
 }
