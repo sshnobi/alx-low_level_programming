@@ -13,7 +13,7 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int size = strlen(src);
+	int size = _strlen(src);
 	int i = 0;
 
 	for (i = 0; i <= size; i++)
@@ -25,4 +25,16 @@ char *_strcpy(char *dest, char *src)
 			break;
 	}
 	return (dest);
+}
+
+
+int _strlen(char *s)
+{
+	int len = 0;
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+	return (len);
 }
