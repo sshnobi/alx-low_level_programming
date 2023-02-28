@@ -12,7 +12,7 @@
 void rev_string(char *s)
 {
 	int size = _strlen(s);
-	/*char tmp;*/
+	char tmp;
 	int i, j;
 	
 	i = 0;
@@ -20,15 +20,11 @@ void rev_string(char *s)
 
 	while (i < j)
 	{
-		/*tmp = s[i];
+		tmp = s[i];
 		s[i] = s[j];
 		s[j] = tmp;
-		i++, j--;*/
-		
-		printf("%c", *s);
-		i++, j--;
-		/*s--;
-		size--;*/
+		i++;
+		j--;
 	}
 	/* put("\n"); */
 }
