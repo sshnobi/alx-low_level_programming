@@ -27,7 +27,11 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-
+/**
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: len
+ */
 int _strlen(char *s)
 {
 	int len = 0;
