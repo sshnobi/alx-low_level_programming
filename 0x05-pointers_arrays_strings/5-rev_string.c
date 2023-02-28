@@ -11,7 +11,7 @@
  */
 void rev_string(char *s)
 {
-	int size = strlen(s);
+	int size = _strlen(s);
 
 	s = s + (size - 1);
 	while (size > 0)
@@ -21,4 +21,22 @@ void rev_string(char *s)
 		size--;
 	}
 	/* put("\n"); */
+}
+
+/**
+ * _strlen - returns length of a string
+ * @s: string
+ * Return: len
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s != '\0')
+	{
+		len++;
+		s++;
+	}
+
+	return (len);
 }
