@@ -13,20 +13,16 @@ char *_strncat(char *dest, char *src, int n)
 	int i = 0;
 	int j = 0;
 
-	/* Get to end of dest string */	
-	while (dest[i] != '\0')
+	while (dest[i] != '\0') /* Get to end of dest string */	
 		i++;
 
-	/* append the characters to end of dest string */
-	while (src[j] != src[n])
+	while (src[j] != src[n]) /* append the characters to end of dest string */
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
-
-	/* append string terminator */
-	dest[i] = '\0';
+	dest[i] = '\0'; /* append string terminator */
 
 	return (dest);
 }
