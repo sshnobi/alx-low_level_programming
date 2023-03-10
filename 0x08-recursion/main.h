@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 
+int primeHelper(int a, int b);
 int helper(int a, int b);
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
